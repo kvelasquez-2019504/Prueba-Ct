@@ -14,6 +14,7 @@
       "src/routes/**",
       "src/controllers/**",
       "src/models/**",
-      "src/middlewares/**"
+      "src/middlewares/**",
+      "src/services/**"
     ]
   }
