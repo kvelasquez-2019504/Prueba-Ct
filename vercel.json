@@ -2,7 +2,7 @@
     "version": 2,
     "name": "caretech",
     "builds": [{ "src": "index.js", "use": "@vercel/node" }],
-    "routes": [{ "src": "/(.*)", "dest": "/index.js" }, { "handle": "filesystem" },
+    "routes": [{ "src": "/(.*)", "dest": "index.js" }, { "handle": "filesystem" },
     {"src":"/caretech/v1/files", "dest": "./src/routes/files.routes.js"},
     {"src":"/caretech/v1/quotes", "dest": "./src/routes/quotes.routes.js"},
     {"src":"/caretech/v1/medicine", "dest": "./src/routes/medications.routes.js"},
