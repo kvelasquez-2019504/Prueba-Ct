@@ -15,7 +15,7 @@ import quotesRoutes from '../src/routes/quotes.routes.js';
 import filesRoutes from '../src/routes/files.routes.js';
 import serviceRoutes from '../src/routes/services.routes.js';
 import prescriptionRoutes from '../src/routes/prescriptions.routes.js';
-import billRoutes from './src/routes/users.routes.js';
+import billRoutes from '../src/routes/users.routes.js';
 
 class Server {
     constructor() {

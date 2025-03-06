@@ -12,8 +12,5 @@
         "src": "/(.*)",
         "dest": "index.js"
       }
-    ],
-    "includeFiles": [
-      "src/routes/**"
     ]
   }
