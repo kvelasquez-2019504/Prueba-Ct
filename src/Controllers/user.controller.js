@@ -1,5 +1,5 @@
 'use strict'
-import User from "../Models/users.model.js";
+import User from "../models/users.model.js";
 
 import bcryptjs from "bcryptjs";
 import { generarJWT } from '../helpers/generate-JWT.js';
