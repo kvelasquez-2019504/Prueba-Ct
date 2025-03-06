@@ -62,7 +62,12 @@ class Server {
         this.app.use(this.servicePath, serviceRoutes);
         this.app.use(this.prescriptionPath, prescriptionRoutes);
         this.app.use(this.billPath, billRoutes);
-        this.app.use((req, res) => {res.status(404).json({ error: 'Not found' })});
+        this.app.use((req, res, next) => {
+            res.status(404).json({
+                ok: false,
+                msg: 'Page not found'
+            })
+        })
 };
 
     listen() {
