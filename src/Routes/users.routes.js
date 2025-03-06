@@ -1,3 +1,4 @@
+'use strict'
 import { Router } from "express";
 import { check } from "express-validator";
 import { login, register } from "../controllers/user.controller.js";
