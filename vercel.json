@@ -9,5 +9,11 @@
         "src": "/(.*)",
         "dest": "index.js"
       }
+    ],
+    "includeFiles": [
+      "src/routes/**",
+      "src/controllers/**",
+      "src/models/**",
+      "src/middlewares/**"
     ]
   }
