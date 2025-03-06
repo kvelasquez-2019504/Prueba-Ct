@@ -62,7 +62,8 @@ class Server {
         this.app.use(this.servicePath, serviceRoutes);
         this.app.use(this.prescriptionPath, prescriptionRoutes);
         this.app.use(this.billPath, billRoutes);
-    };
+        this.app.use((req, res) => {res.status(404).json({ error: 'Not found' })});
+};
 
     listen() {
         this.app.listen(this.port, () => {
