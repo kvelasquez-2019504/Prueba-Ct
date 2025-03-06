@@ -1,6 +1,6 @@
-import mongoose, { mongo } from "mongoose";
+import { Schema, model } from "mongoose";
 
-const CategorySchema = mongoose.Schema({
+const CategorySchema = Schema({
     name: {
         type: String,
         required: true
@@ -11,4 +11,9 @@ const CategorySchema = mongoose.Schema({
     },
 })
 
-export default mongoose.model('Category', CategorySchema);
+CategorySchema.method.toJson = function () {
+    const { __v, ...object } = this.toObject();
+    return object;
+}
+
+export default model('Category', CategorySchema);

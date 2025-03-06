@@ -1,6 +1,6 @@
-import mongoose, { Schema } from "mongoose";
+import { Schema, model } from "mongoose";
 
-const DoctorSchema = mongoose.Schema({
+const DoctorSchema = Schema({
     name: {
         type: String,
         required: true
@@ -27,4 +27,4 @@ const DoctorSchema = mongoose.Schema({
     },
 })
 
-export default mongoose.model('Doctor', DoctorSchema);
+export default model('Doctor', DoctorSchema);

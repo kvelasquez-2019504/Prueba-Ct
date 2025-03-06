@@ -1,6 +1,6 @@
-import mongoose, { mongo } from "mongoose";
+import { Schema, model } from "mongoose";
 
-const FilesSchema = mongoose.Schema({
+const FilesSchema = Schema({
     patient: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Patient',
@@ -36,4 +36,9 @@ const FilesSchema = mongoose.Schema({
     ]
 });
 
-export default mongoose.model('File', FilesSchema);
+FilesSchema.method.toJson = function () {
+    const { __v, ...object } = this.toObject();
+    return object;
+}
+
+export default model('File', FilesSchema);
