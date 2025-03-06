@@ -5,7 +5,7 @@ import cors from 'cors'
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
-import authRoutes from '../src/routes/users.routes.js'
+import authRoutes from '../src/routes/users.routes'
 import apiLimiter from "../src/middlewares/validar-peticiones.js";
 import doctorsRoutes from '../src/Routes/doctors.routes.js';
 import patientRoutes from '../src/Routes/patients.routes.js';
